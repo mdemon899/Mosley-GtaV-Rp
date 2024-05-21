@@ -13,6 +13,8 @@ body {
     padding: 0;
 }
 
+/* Header Section Start */
+
 #header_section {
     padding: 0.5rem 2rem;
     background-color: #1F2937;
@@ -43,3 +45,5 @@ body {
 #navMenu ul li a:hover {
     color: #ccc;
 }
+
+/* Header Section End */
