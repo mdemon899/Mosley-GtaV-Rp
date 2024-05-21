@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/all.min.css">
     <link rel="stylesheet" href="/CSS/style.css">
 </head>
 
@@ -21,36 +22,57 @@
                 <li><a href="#">Repair History</a></li>
                 <li><a href="#">Mechanic Roster</a></li>
                 <li><a href="#">Sign Out</a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
     </header>
     <!-- Header Section End -->
 
+    <!-- Calculation Section Start -->
     <section id="calculation_section">
         <a href="#"><img src="/IMG/logo2.png" alt="logo2"></a>
         <form action="" id="calculation_form">
-            <label for="aluminum">Aluminum: $100</label>
-            <input type="number" name="aluminum" id="aluminum">
+            <div class="single_container">
+                <label for="aluminum">Aluminum: $100</label>
+                <input type="number" name="aluminum" id="aluminum" min="0" value="0">
+            </div>
 
-            <label for="rubber">Rubber: $20</label>
-            <input type="number" name="rubber" id="rubber">
+            <div class="single_container">
+                <label for="rubber">Rubber: $20</label>
+                <input type="number" name="rubber" id="rubber" min="0" value="0">
+            </div>
 
-            <label for="motorOil">Motor Oil: $700</label>
-            <input type="number" name="motorOil" id="motorOil">
+            <div class="single_container">
+                <label for="motorOil">Motor Oil: $700</label>
+                <input type="number" name="motorOil" id="motorOil" min="0" value="0">
+            </div>
 
-            <label for="glass">Glass: $50</label>
-            <input type="number" name="glass" id="glass">
+            <div class="single_container">
+                <label for="glass">Glass: $50</label>
+                <input type="number" name="glass" id="glass" min="0" value="0">
+            </div>
 
-            <label for="scrapMetal">Scrap Metal: $100</label>
-            <input type="number" name="scrapMetal" id="scrapMetal">
+            <div class="single_container">
+                <label for="scrapMetal">Scrap Metal: $100</label>
+                <input type="number" name="scrapMetal" id="scrapMetal" min="0" value="0">
+            </div>
 
-            <label for="steel">Steel: $130</label>
-            <input type="number" name="steel" id="steel">
+            <div class="single_container">
+                <label for="steel">Steel: $130</label>
+                <input type="number" name="steel" id="steel" min="0" value="0">
+            </div>
 
-            <label for="total">Total Amount</label>
-            <input type="number" name="total" id="total" readonly>
+            <div class="single_container">
+                <label for="total">Total Amount</label>
+                <input type="number" name="total" id="total" readonly>
+            </div>
+
+            <button id="calculateBtn" type="submit">Calculate</button>
         </form>
     </section>
+    <!-- Calculation Section End -->
+
     <!-- Linking JavaScript -->
     <script src="/JS/app.js"></script>
 </body>

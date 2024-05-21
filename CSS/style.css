@@ -11,6 +11,7 @@ body {
     /* font-family: 'Poppins', sans-serif; */
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 /* Header Section Start */
@@ -46,4 +47,115 @@ body {
     color: #ccc;
 }
 
+#navMenu .fa-bars,
+#navMenu .fa-xmark {
+    display: none;
+    font-size: 2rem;
+    color: #C27803;
+    cursor: pointer;
+}
+
 /* Header Section End */
+
+/* Calculation Section Start */
+
+#calculation_section {
+    padding: 3rem;
+    background: url(/IMG/bg.png) no-repeat center center /cover;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculation_form {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #fff;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+#calculation_form label {
+    font-family: 'Figtree', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#calculation_form input {
+    margin-top: 8px;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 2px solid #ECEEF0;
+    outline: none;
+}
+
+#calculation_form #calculateBtn {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #C27803;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: background-color 0.4s ease;
+}
+
+#calculation_form #calculateBtn:hover {
+    background-color: #99620aec;
+}
+
+/* Calculation Section End */
+
+/* Media Quires Start */
+@media screen and (max-width: 621px) {
+
+    #calculation_section {
+        padding: 1rem;
+    }
+
+    #header_section {
+        justify-content: space-between;
+    }
+
+    #navMenu ul {
+        width: 200px;
+        margin: 0;
+        position: fixed;
+        flex-direction: column;
+        gap: 4rem;
+        top: 0px;
+        padding: 2rem;
+        z-index: 2;
+        transition: right 0.4s;
+        right: -200px;
+        background-color: #1F2937;
+    }
+
+    #navMenu .fa-bars,
+    #navMenu .fa-xmark {
+        display: block;
+    }
+
+    #navMenu .fa-xmark {
+        color: #fff;
+        top: 20px;
+        left: 20px;
+        position: absolute;
+    }
+
+    #navMenu ul li:first-child {
+        padding-top: 3rem;
+    }
+
+}
+
+/* Media Quires End */
